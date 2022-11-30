@@ -13,14 +13,15 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class MyArrayAdapter extends ArrayAdapter<Item> {
+public class AdapterTP extends ArrayAdapter<item_tacpham> {
+
     Activity context;
     int idLayout;
-    ArrayList<Item> mylist;
+    ArrayList<item_tacpham> mylist;
 
-    public MyArrayAdapter(Activity context, int idLayout, ArrayList<Item> mylist) {
-        super(context, idLayout,mylist);
-        this.context = context;
+    public AdapterTP(Activity context1, int idLayout, ArrayList<item_tacpham> mylist) {
+        super(context1, idLayout, mylist);
+        this.context = context1;
         this.idLayout = idLayout;
         this.mylist = mylist;
     }
@@ -31,14 +32,13 @@ public class MyArrayAdapter extends ArrayAdapter<Item> {
         LayoutInflater mylaoutIn = context.getLayoutInflater();
         convertView =mylaoutIn.inflate(idLayout,null);
 
-        Item item = mylist.get(position);
+        item_tacpham item = mylist.get(position);
 
-        ImageView img_item = convertView.findViewById(R.id.img_item);
-        img_item.setImageResource(item.getImage());
+        TextView txt_item = convertView.findViewById(R.id.maTP);
+        txt_item.setText(item.getMaTP());
 
-
-        TextView txt_item = convertView.findViewById(R.id.tv);
-        txt_item.setText(item.getName());
+        TextView name = convertView.findViewById(R.id.nameTP);
+        name.setText(item.getNameTP());
         return  convertView;
     }
 }

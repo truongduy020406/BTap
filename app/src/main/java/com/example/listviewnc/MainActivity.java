@@ -11,8 +11,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    int image[]={R.drawable.bi,R.drawable.cam,R.drawable.cachua};
-    String name[]={"bí","cam","cà chua"};
+    int image[]={R.drawable.huycan,R.drawable.xuandieu,R.drawable.macngon,R.drawable.hemi,R.drawable.shake};
+    String name[]={"Huy Cận","Xuân Diệu","Mạc Ngôn","Hemingway","Shakespeare"};
 
     ArrayList<Item> mylist;
     MyArrayAdapter myArrayAdapter;

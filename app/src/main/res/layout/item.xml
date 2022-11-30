@@ -9,7 +9,7 @@
         android:id="@+id/img_item"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/bi" />
+        android:src="@drawable/huycan" />
 
     <TextView
         android:id="@+id/tv"
